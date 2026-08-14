@@ -93,4 +93,4 @@ GET /res/downurl/mv/{movieId}   →  JSON
 - 列表页评分是 IMDB 不是豆瓣，别用错过滤字段
 - 详情页资源区是异步加载（"加载中..."），需等待 3s+ 再提取
 - 磁力链接完整性：`magnet:?xt=urn:btih:{m[i]}` 直接拼，不要依赖页面 a 标签 href（可能被截断）
-- 账号密码敏感 → 存本地文件（如 `/path/to/data/movie_site_cred.txt`），不写入对话/skill
+- 账号密码敏感 → 存本地文件（如 `/path/to/data/site_credentials.txt`），不写入对话/skill
