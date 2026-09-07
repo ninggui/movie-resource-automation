@@ -1,40 +1,40 @@
-# movie-resource-automation
+# 电影资源站自动化
 
-电影资源站自动搜索筛选磁力链接。用户给资源站+账号时：登录 → 筛选 → API 提取磁力 → 网盘/qBittorrent 缓存。
+![GitHub stars](https://img.shields.io/github/stars/ninggui/movie-resource-automation)
+![License](https://img.shields.io/github/license/ninggui/movie-resource-automation)
+[![SkillHub](https://img.shields.io/badge/SkillHub-在线安装-blue)](https://skillhub.cn/skills/movie-resource-automation)
+
+登录→筛选→API 提取磁力→缓存：批量搜索高分片单。
 
 ## 这是什么
 
-一个可复用的 AI Agent 技能（Skill），来自真实业务场景沉淀。专注于"资源站自动搜片"这一子任务——与 media-resource-automation 配套，本技能侧重资源站登录与磁力提取的技术细节。
+一个可复用的 AI Agent 技能（Skill），来自真实业务场景沉淀，含完整执行流程、避坑清单与验证步骤。
 
-## 解决的问题
+## 快速使用
 
-- 资源站需要登录才能搜索，自动化登录有讲究
-- 搜索结果里真资源/假资源混杂
-- 磁力链接提取需要针对站点结构的解析方案
-- 缓存通道（网盘/下载器）接入细节
+将本仓库放入 Agent 技能目录后，用对应触发词调用（见 SKILL.md），Agent 会自动加载并执行完整流程。
 
-## 核心流程
+## 核心能力
 
-1. **登录资源站**——处理登录态（cookie/session）
-2. **搜索筛选**——按关键词搜索，质量/大小过滤
-3. **API 提取磁力**——按站点结构解析磁力链接
-4. **缓存通道**——提交到 115 网盘离线或 qBittorrent 下载
+| 能力 | 说明 |
+|------|------|
+| 站内评分榜批量筛选 |
+| 详情 API 磁力提取（中字/国配/全集优先） |
+| 批量去重登记 |
+| 一键复制磁力列表 |
 
-## 筛选规则示例
+## 使用方式（安装）
 
-- 4K 优先，≥15GB 优先
-- 按清晰度/文件大小/做种数综合排序
-- 排除广告资源特征
+- **Hermes**: 放入 `skills/` 目录
+- **Claude**: 放入 `~/.claude/skills/`
+- **其他 Agent**: 按对应 SKILL.md 格式放入技能目录
+- **SkillHub 一键安装**: https://skillhub.cn/skills/movie-resource-automation
 
-## 使用方式
+## 优势
 
-将本仓库内容放入你的 Agent 技能目录：
-
-- **Hermes**: `skills/` 目录
-- **Claude**: `~/.claude/skills/`
-- **其他 Agent**: 按对应 SKILL.md 格式
-
-Agent 会在匹配触发条件时自动加载并使用。
+- 一次任务可出百部片单
+- 评分/地区/画质多维筛选
+- 频率控制防 ban
 
 ## 内容结构
 
