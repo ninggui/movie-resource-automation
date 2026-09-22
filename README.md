@@ -1,5 +1,8 @@
 <div align="center">
 
+
+![cover](assets/cover.png)
+
 # movie-resource-automation
 
 **影视站自动搜片：登录→搜索→筛选 4K/豆瓣≥7→批量提取磁力。**
